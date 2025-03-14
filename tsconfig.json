@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "ESNext",
+
+    "declaration": true,
+    "declarationMap": true, // Optional, generates source maps for declarations
+    "baseUrl": ".",
+    "paths": {
+      "@/Model/*": ["app/Models/*"],
+      "@Controllers/*": ["app/Http/Controllers/*"],
+      "@/Request/*": ["app/Http/Requests/*"],
+      "@Providers/*": ["app/Providers/*"],
+      "@/Services/*": ["app/Services/*"],
+      "@/*": ["./resources/js/*"]
+    },
+    "esModuleInterop": true,
+    "outDir": "./build",
+    "strict": true,
+    "target": "ESNext",
+    "skipLibCheck": true, // Skip type checking of all declaration files (.d.ts)
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "resolveJsonModule": true, //
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["vite/client"],
+
+    "skipDefaultLibCheck": true
+  },
+  // "include": ["**/*"],
+  "include": [
+    "resources/js/**/*.ts",
+    "resources/js/**/*.tsx",
+    "resources/js/**/*.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}
