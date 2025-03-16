@@ -30,11 +30,15 @@ const Home = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Link href="/docs">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/jammehabdou64/new-jcc-express-mvc-app"
+                >
                   <Button variant="outline" size="lg">
                     Documentation
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

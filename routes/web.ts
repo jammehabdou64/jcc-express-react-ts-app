@@ -2,7 +2,7 @@ import { UsersController } from "@Controllers/UsersController";
 import { Auth } from "jcc-express-mvc/";
 import { Route } from "jcc-express-mvc/Route";
 
-Route.get("/", (req, res) => {
+Route.middleware("guest").get("/", (req, res) => {
   return res.inertia("Index");
 });
 
@@ -16,6 +16,10 @@ Route.middleware("guest").get("/register", (req, res) =>
 
 Route.middleware(["auth"]).get("/home", (req, res, next) => {
   return res.inertia("Home");
+});
+
+Route.middleware(function (req, res, next) {}).get("/", (req, res) => {
+  return res.json({ hello: "Hello" });
 });
 
 Route.prefix("/auth").group((Route) => {

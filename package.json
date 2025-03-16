@@ -2,13 +2,15 @@
   "name": "app",
   "version": "1.0.0",
   "main": "server.ts",
-  "type": "module",
   "scripts": {
     "start": "node -r tsconfig-paths/register server.js",
     "dev": "tsx watch --require tsconfig-paths/register server.ts",
     "watch": "vite",
     "build": "tsc && ts-node artisanNode build",
     "vite-build": "vite build"
+  },
+  "_moduleAliases": {
+    "@Controllers": ".app/Http/Controllers"
   },
   "keywords": [],
   "author": "",
@@ -56,7 +58,7 @@
     "fs-extra": "^11.2.0",
     "inflection": "^3.0.2",
     "jcc-eloquent": "^1.0.5",
-    "jcc-express-mvc": "^1.4.7",
+    "jcc-express-mvc": "^1.5.2",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.479.0",
     "morgan": "^1.10.0",

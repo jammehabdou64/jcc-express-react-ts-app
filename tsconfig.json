@@ -2,9 +2,8 @@
   "compilerOptions": {
     "allowJs": true,
     "module": "ESNext",
-
     "declaration": true,
-    "declarationMap": true, // Optional, generates source maps for declarations
+    "declarationMap": true,
     "baseUrl": ".",
     "paths": {
       "@/Model/*": ["app/Models/*"],
@@ -12,15 +11,16 @@
       "@/Request/*": ["app/Http/Requests/*"],
       "@Providers/*": ["app/Providers/*"],
       "@/Services/*": ["app/Services/*"],
+      "@Middleware/*": ["app/Http/Middlewares/*"],
       "@/*": ["./resources/js/*"]
     },
     "esModuleInterop": true,
     "outDir": "./build",
     "strict": true,
     "target": "ESNext",
-    "skipLibCheck": true, // Skip type checking of all declaration files (.d.ts)
-    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
-    "resolveJsonModule": true, //
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "moduleResolution": "bundler",
@@ -31,11 +31,7 @@
 
     "skipDefaultLibCheck": true
   },
-  // "include": ["**/*"],
-  "include": [
-    "resources/js/**/*.ts",
-    "resources/js/**/*.tsx",
-    "resources/js/**/*.d.ts"
-  ],
+  "include": ["**/*"],
+
   "exclude": ["node_modules"]
 }
