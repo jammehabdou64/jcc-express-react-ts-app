@@ -4,9 +4,9 @@
   "main": "server.ts",
   "scripts": {
     "start": "node -r tsconfig-paths/register server.js",
-    "dev": "tsx watch --require tsconfig-paths/register server.ts",
+    "dev": "bun --watch -r tsconfig-paths/register server.ts",
     "watch": "vite",
-    "build": "tsc && ts-node artisanNode build",
+    "build": "tsc && bun artisanNode build",
     "vite-build": "vite build"
   },
   "_moduleAliases": {
@@ -43,6 +43,7 @@
     "@radix-ui/react-tooltip": "^1.1.8",
     "app-root-path": "^3.1.0",
     "bcryptjs": "^2.4.3",
+    "bun": "^1.2.5",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.5.1",
     "clsx": "^2.1.1",
@@ -106,7 +107,6 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.17",
     "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.19.3",
     "typescript": "^5.7.3",
     "vite": "^6.2.2"
   }
