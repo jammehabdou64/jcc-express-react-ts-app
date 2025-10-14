@@ -1,19 +1,10 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "allowJs": true,
     "module": "ESNext",
     "declaration": true,
     "declarationMap": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/Model/*": ["app/Models/*"],
-      "@Controllers/*": ["app/Http/Controllers/*"],
-      "@/Request/*": ["app/Http/Requests/*"],
-      "@Providers/*": ["app/Providers/*"],
-      "@/Services/*": ["app/Services/*"],
-      "@Middleware/*": ["app/Http/Middlewares/*"],
-      "@/*": ["./resources/js/*"]
-    },
     "esModuleInterop": true,
     "outDir": "./build",
     "strict": true,
