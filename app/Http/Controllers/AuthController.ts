@@ -1,6 +1,5 @@
-import { bcrypt, Auth } from "jcc-express-mvc";
+import { Auth } from "jcc-express-mvc";
 import { httpContext } from "jcc-express-mvc";
-import { User } from "@/Model/User";
 import { Inject, Method } from "jcc-express-mvc/Core/Dependency";
 import { AuthRequest } from "@/Request/AuthRequest";
 
