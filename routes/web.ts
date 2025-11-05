@@ -1,4 +1,4 @@
-import { UsersController } from "@Controllers/UsersController";
+import { AuthController } from "@Controllers/AuthController";
 import { Auth } from "jcc-express-mvc/";
 import { Route } from "jcc-express-mvc/Core";
 
@@ -20,7 +20,7 @@ Route.middleware(["auth"]).get("/home", (req, res, next) => {
 
 Route.prefix("/auth").group((Route) => {
   Route.post("/login", Auth.attempt);
-  Route.post("/register", [UsersController, "store"]);
+  Route.post("/register", [AuthController, "store"]);
 });
 
 Route.get("/logout", Auth.logout);
