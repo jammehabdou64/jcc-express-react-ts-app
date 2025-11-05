@@ -20,7 +20,7 @@ Route.middleware(["auth"]).get("/home", (req, res, next) => {
 
 Route.prefix("/auth").group((Route) => {
   Route.post("/login", Auth.attempt);
-  Route.post("/register", [AuthController, "store"]);
+  Route.post("/register", [AuthController, "register"]);
 });
 
 Route.get("/logout", Auth.logout);
