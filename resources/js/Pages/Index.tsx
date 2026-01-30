@@ -33,7 +33,7 @@ const Home = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/jammehabdou64/new-jcc-express-mvc-app"
+                  href="https://www.jcc-express.uk"
                 >
                   <Button variant="outline" size="lg">
                     Documentation
@@ -170,8 +170,7 @@ const Home = () => {
                 <span className="text-lg font-bold">JCC Framework</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} JCC Framework. All rights
-                reserved.
+                © {new Date().getFullYear()} JCC Framework. All rights reserved.
               </p>
             </div>
           </div>
