@@ -13,8 +13,9 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "jsx": "react-jsx"
   },
   "include": ["**/*"],
-  "exclude": ["node_modules", "resources/js"]
+  "exclude": ["node_modules", "build", "bootstrap/ssr"]
 }
