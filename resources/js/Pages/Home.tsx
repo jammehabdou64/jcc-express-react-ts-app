@@ -1,4 +1,3 @@
-import React from "react";
 import { BarChart, Clock, Server, Users } from "lucide-react";
 
 import { Button } from "@/Components/ui/button";

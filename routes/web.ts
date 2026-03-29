@@ -19,8 +19,8 @@ Route.middleware(["auth"]).get("/home", (req, res, next) => {
 });
 
 Route.prefix("/auth").group((Route) => {
-  Route.post("/login", Auth.attempt);
+  Route.post("/login", [AuthController, "login"]);
   Route.post("/register", [AuthController, "register"]);
 });
 
-Route.get("/logout", Auth.logout);
+Route.get("/logout", () => Auth.logout());
