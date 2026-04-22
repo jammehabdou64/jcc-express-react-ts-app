@@ -5,6 +5,9 @@
 /public/build
 /bootstrap/ssr
 /public/hot
+/storage/framework
+/storage/sessions
+/storage/session
 /.pnp
 .pnp.js
 # testing
