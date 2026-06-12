@@ -1,5 +1,5 @@
 import { Auth } from "jcc-express-mvc";
-import { httpContext } from "jcc-express-mvc";
+import type { HttpContext } from "jcc-express-mvc/lib/Type/HttpContext";
 import { Inject, Method } from "jcc-express-mvc/Core/Dependency";
 import { AuthRequest } from "@/Request/AuthRequest";
 
@@ -10,7 +10,7 @@ export class AuthController {
   //
 
   @Method()
-  async register({ req, res, next } = httpContext, authRequest: AuthRequest) {
+  async register({ req, res, next }: HttpContext, authRequest: AuthRequest) {
     const save = await authRequest.save();
     return save
       ? Auth.attempt(next)
@@ -19,7 +19,7 @@ export class AuthController {
 
   //
 
-  async login({ next } = httpContext) {
+  async login({ next }: HttpContext) {
     return Auth.attempt(next);
   }
 }
